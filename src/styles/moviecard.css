@@ -4,6 +4,7 @@
   height: 513px;
   border-radius: 10px;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .movie-card .poster {

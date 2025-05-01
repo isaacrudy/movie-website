@@ -4,6 +4,7 @@ import "../styles/pagesinglemovie.css";
 import { getMovieByID, IMG_BASE } from "../utils/api";
 import { useParams } from "react-router-dom";
 import { formatMovieDate } from "../utils/toolbelt";
+import FavoriteButton from "../components/FavoriteButton";
 
 function PageSingleMovie() {
   const [movieData, setMovieData] = useState();
@@ -12,7 +13,6 @@ function PageSingleMovie() {
   useEffect(() => {
     getMovieByID(id)
       .then((data) => {
-        console.log(data);
         setMovieData(data);
       })
       .catch((error) => {
@@ -24,14 +24,16 @@ function PageSingleMovie() {
     <main id="single-movie-page">
       {movieData && (
         <>
-          <img
-            src={`${IMG_BASE}/w1280/${movieData.backdrop_path}`}
-            alt={movieData.overview}
-            className="backdrop"
-          />
+          <div className="backdrop-container">
+            <img
+              src={`${IMG_BASE}/w1280/${movieData.backdrop_path}`}
+              alt={movieData.overview}
+              className="backdrop"
+            />
+          </div>
           <h1>{movieData.title}</h1>
           <h2>Release Date: {formatMovieDate(movieData.release_date)}</h2>
-          <button className="favorites-button">❤️</button>
+          <FavoriteButton movieData={movieData} />
         </>
       )}
     </main>

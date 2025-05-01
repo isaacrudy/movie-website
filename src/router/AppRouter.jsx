@@ -3,18 +3,23 @@ import PageHome from "../pages/PageHome";
 import PageSingleMovie from "../pages/PageSingleMovie";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { GlobalProvider } from "../context/GlobalContext";
+import PageFavorites from "../pages/PageFavorites";
 
 function AppRouter() {
   return (
     <BrowserRouter>
-      <Header />
-      <div className="wrapper">
-        <Routes>
-          <Route path="/" element={<PageHome />} />
-          <Route path="/movie/:id" element={<PageSingleMovie />} />
-        </Routes>
-      </div>
-      <Footer />
+      <GlobalProvider>
+        <Header />
+        <div className="wrapper">
+          <Routes>
+            <Route path="/" element={<PageHome />} />
+            <Route path="/movie/:id" element={<PageSingleMovie />} />
+            <Route path="/favorites" element={<PageFavorites />} />
+          </Routes>
+        </div>
+        <Footer />
+      </GlobalProvider>
     </BrowserRouter>
   );
 }
