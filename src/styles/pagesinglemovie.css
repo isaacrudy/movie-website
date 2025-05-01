@@ -1,0 +1,9 @@
+.backdrop {
+  object-fit: cover;
+  background-size: cover;
+  margin: 0 auto;
+}
+
+#single-movie-page {
+  min-height: 90vh;
+}

@@ -15,4 +15,18 @@ function getPopularMovies() {
     });
 }
 
-export { getPopularMovies, IMG_BASE };
+function getMovieByID(id) {
+  // https://api.themoviedb.org/3/movie/{movie_id}
+  return fetch(`${API_ENDPOINT}/${id}?api_key=${API_KEY}`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Response code was not ok.");
+      }
+      return response.json();
+    })
+    .catch((error) => {
+      throw error;
+    });
+}
+
+export { getPopularMovies, getMovieByID, IMG_BASE };
