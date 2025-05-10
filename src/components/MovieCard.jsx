@@ -23,7 +23,12 @@ function MovieCard({ movieData }) {
       <div className="backdrop">
         <h2 className="title">{movieData.title}</h2>
         <h3 className="release">{formatMovieDate(movieData.release_date)}</h3>
-        <span className="rating">{movieData.vote_average.toFixed(1)}</span>
+        <span className="summary">
+          {movieData.overview.substring(0, 75)}...
+        </span>
+        <span className="rating">
+          Rating: {movieData.vote_average.toFixed(1)}
+        </span>
         <FavoriteButton movieData={movieData} />
       </div>
     </div>

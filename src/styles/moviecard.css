@@ -1,7 +1,7 @@
 .movie-card {
   position: relative;
-  width: 342px;
-  height: 513px;
+  width: 200px;
+  height: 300px;
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
@@ -17,10 +17,40 @@
 }
 
 .movie-card .backdrop {
-  background-color: rgba(0, 0, 0, 0.5);
-  height: 100%;
+  background-color: rgba(0, 0, 0, 0.75);
+  height: 95%;
+  width: 90%;
+  max-height: 300px;
   opacity: 0;
+  padding: 5%;
   transition: opacity 0.4s ease;
+  display: grid;
+  grid-template-areas:
+    "title title title favorite"
+    "title title title ."
+    "release release release release"
+    "summary summary summary summary"
+    "rating rating . .";
+}
+
+.movie-card .backdrop .title {
+  grid-area: title;
+}
+
+.movie-card .backdrop .release {
+  grid-area: release;
+}
+
+.movie-card .backdrop .summary {
+  grid-area: summary;
+}
+
+.movie-card .backdrop .rating {
+  grid-area: rating;
+}
+
+.movie-card .backdrop .fav-button {
+  grid-area: favorite;
 }
 
 .movie-card .backdrop:hover {

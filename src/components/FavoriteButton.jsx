@@ -18,9 +18,9 @@ function FavoriteButton({ movieData }) {
   }
 
   return (
-    <button className="fav-button" onClick={handleButtonClick}>
+    <span className="fav-button" onClick={handleButtonClick}>
       {isFavorited ? "❤️" : "🤍"}
-    </button>
+    </span>
   );
 }
 

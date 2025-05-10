@@ -121,7 +121,7 @@ function PageHome() {
 
   return (
     <main id="home">
-      <select onChange={handleSelectChange}>
+      <select id="list-select" onChange={handleSelectChange}>
         <option value={"popular"}>Popular</option>
         <option value={"newRelease"}>New Releases</option>
         <option value={"topRated"}>Top Rated</option>
