@@ -22,9 +22,9 @@ function MovieCard({ movieData }) {
       />
       <div className="backdrop">
         <h2 className="title">{movieData.title}</h2>
-        <h3 className="release">{formatMovieDate(movieData.release_date)}</h3>
+        <h6 className="release">{formatMovieDate(movieData.release_date)}</h6>
         <span className="summary">
-          {movieData.overview.substring(0, 75)}...
+          {movieData.overview.substring(0, 50)}...
         </span>
         <span className="rating">
           Rating: {movieData.vote_average.toFixed(1)}

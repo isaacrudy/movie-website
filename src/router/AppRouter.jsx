@@ -5,8 +5,13 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { GlobalProvider } from "../context/GlobalContext";
 import PageFavorites from "../pages/PageFavorites";
+import { useEffect } from "react";
 
 function AppRouter() {
+  useEffect(() => {
+    document.title = "Movies";
+  }, []);
+
   return (
     <BrowserRouter>
       <GlobalProvider>

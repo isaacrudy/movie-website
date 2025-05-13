@@ -8,8 +8,10 @@ function PageFavorites() {
 
   return (
     <main id="favorites-page">
-      <h2>
-        {favorites.length === 0 ? "No Favorites Saved" : "Favorite Movies"}
+      <h2 className="no-favorites">
+        {favorites.length === 0
+          ? "No Favorites Saved. Add some of your favorite movies on the home page!"
+          : "Favorite Movies"}
       </h2>
       <MovieCards movieList={favorites} sectionClass={"favorites"} />
     </main>

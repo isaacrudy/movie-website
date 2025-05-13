@@ -1,7 +1,7 @@
 .backdrop-container {
   position: relative;
   width: 100%;
-  aspect-ratio: 16/9;
+  aspect-ratio: 32/9;
   overflow: hidden;
   background-color: #111;
 }
@@ -11,8 +11,79 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top;
 }
 
 #single-movie-page {
   min-height: 90vh;
+}
+
+.recommendations .movie-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 1rem;
+}
+
+.single-movie-display {
+  display: grid;
+  grid-template-areas:
+    ". title title ."
+    ". date date ."
+    "rating tags tags fav"
+    "summary summary summary summary"
+    "recs recs recs recs";
+}
+
+.single-movie-display .movie-title {
+  grid-area: title;
+  text-align: center;
+}
+
+.single-movie-display .release-date {
+  grid-area: date;
+  text-align: center;
+}
+
+.single-movie-display .single-movie-rating {
+  grid-area: rating;
+  text-align: center;
+  color: #d1af3b;
+  display: flex;
+  font-size: x-large;
+  justify-content: center;
+  align-items: center;
+}
+
+.single-movie-display .tags {
+  grid-area: tags;
+  list-style: none;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.single-movie-display .tags .tag {
+  margin: 1rem;
+  padding: 1rem;
+  border: 1px solid;
+  font-weight: 700;
+}
+
+.single-movie-display .fav-button {
+  grid-area: fav;
+  cursor: pointer;
+}
+
+.single-movie-display .summary {
+  grid-area: summary;
+  padding: 1rem;
+}
+
+.single-movie-display .recommendations {
+  grid-area: recs;
+  padding: 1rem;
 }

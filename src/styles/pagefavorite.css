@@ -1,0 +1,8 @@
+.no-favorites {
+  display: flex;
+  justify-content: center;
+}
+
+.movie-cards {
+  padding: 1rem;
+}

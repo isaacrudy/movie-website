@@ -68,11 +68,25 @@ function getMovieByID(id) {
     });
 }
 
+function getRecommendedMovies(id) {
+  return fetch(`${API_ENDPOINT}/${id}/recommendations?api_key=${API_KEY}`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Response code was not ok.");
+      }
+      return response.json();
+    })
+    .catch((error) => {
+      throw error;
+    });
+}
+
 export {
   getPopularMovies,
   getNewMovies,
   getUpcomingMovies,
   getTopRatedMovies,
   getMovieByID,
+  getRecommendedMovies,
   IMG_BASE,
 };
