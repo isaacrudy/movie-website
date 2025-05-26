@@ -15,10 +15,16 @@ function HeroImage({ movieData }) {
       }}
       className="hero-image"
     >
-      <img
-        src={`${IMG_BASE}/w1280/${movieData.backdrop_path}`}
-        alt={movieData.title + " backdrop as hero image"}
-      />
+      <picture>
+        <source 
+          media="(min-width:30em)"
+          srcset={`${IMG_BASE}/w1280/${movieData.backdrop_path}`}
+        />
+        <img
+          src={`${IMG_BASE}/w500/${movieData.poster_path}`}
+          alt={movieData.title}
+        />
+      </picture>
       <div className="hero-gradient">
         <div className="hero-title">
           <FavoriteButton movieData={movieData} />

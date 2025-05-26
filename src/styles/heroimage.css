@@ -4,8 +4,17 @@
 
 .hero-image img {
     width: 100vw;
-    max-height: 80vh;
+    height: 100vh;
     object-fit: cover;
+}
+
+/* pc sizing */
+@media (min-width: 30em) {
+    .hero-image img {
+        width: 100vw;
+        max-height: 80vh;
+        object-fit: cover;
+    }
 }
 
 .hero-gradient {
