@@ -1,0 +1,38 @@
+.hero-image {
+    position: relative;
+}
+
+.hero-image img {
+    width: 100vw;
+    max-height: 80vh;
+    object-fit: cover;
+}
+
+.hero-gradient {
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 4rem);
+    padding: 3rem 2rem;
+
+    background: linear-gradient(
+        to top,
+        rgba(35, 23, 42, 1) 0%,
+        rgba(35, 23, 42, 0.5) 70%,
+        rgba(35, 23, 42, 0) 100%
+        );
+}
+
+.hero-gradient .release {
+    font-weight: bold;
+}
+
+.hero-gradient .summary {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.hero-title {
+    display: flex;
+    gap: 0.5rem;
+}
