@@ -17,6 +17,10 @@ function HeroImage({ movieData }) {
     >
       <picture>
         <source 
+          media="(min-width:60em)"
+          srcset={`${IMG_BASE}/original/${movieData.backdrop_path}`}
+        />
+        <source 
           media="(min-width:30em)"
           srcset={`${IMG_BASE}/w1280/${movieData.backdrop_path}`}
         />
