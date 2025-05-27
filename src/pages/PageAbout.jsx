@@ -26,14 +26,14 @@ function PageAbout() {
           </p>
           <p>
             We believe that movies have the power to inspire, entertain, and bring
-            people together, and we’re committed to making CineBase the go-to
+            people together, and we’re committed to making Cinema Wave the go-to
             resource for film lovers everywhere.
           </p>
         </section>
       </div>
       <div className="body-wrapper">
       <section className="about-section-2">
-        <h2>Cinema Wave Advantage</h2>
+        <h2>The Cinema Wave Advantage</h2>
         <ul>
           <li>
             <strong>Cast and Crew:</strong> Explore the talented individuals behind your favorite
@@ -43,15 +43,11 @@ function PageAbout() {
             <strong>Plot Summaries:</strong> Get a quick overview of what each movie is about.
           </li>
           <li>
-            <strong>Reviews and Ratings:</strong> Discover what critics and fellow movie lovers
+            <strong>Movie Ratings:</strong> Discover what critics and fellow movie lovers
             think.
           </li>
           <li>
-            <strong>Trivia and Fun Facts:</strong> Dive into behind-the-scenes stories and
-            little-known details.
-          </li>
-          <li>
-            <strong>Streaming Links:</strong> Find out where to watch your next favorite movie.
+            <strong>Genre Tags:</strong> Find out where to what story your next favorite movie is going to tell.
           </li>
         </ul>
       </section>
