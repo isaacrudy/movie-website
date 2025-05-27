@@ -81,6 +81,24 @@ function getRecommendedMovies(id) {
     });
 }
 
+function getRandomPopularMovie() {
+  return fetch(`${API_ENDPOINT}/popular?api_key=${API_KEY}`)
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error ("Response code was not ok.");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      const movies = data.results;
+      const randomIndex = Math.floor(Math.random() * movies.length);
+      return movies[randomIndex];
+    })
+    .catch((error) => {
+      throw error;
+    })
+}
+
 export {
   getPopularMovies,
   getNewMovies,
@@ -88,5 +106,6 @@ export {
   getTopRatedMovies,
   getMovieByID,
   getRecommendedMovies,
+  getRandomPopularMovie,
   IMG_BASE,
 };

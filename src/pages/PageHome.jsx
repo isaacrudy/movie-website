@@ -5,6 +5,7 @@ import {
   getPopularMovies,
   getTopRatedMovies,
   getUpcomingMovies,
+  getRandomPopularMovie
 } from "../utils/api";
 import MovieCards from "../components/MovieCards";
 import "../styles/pagehome.css";
