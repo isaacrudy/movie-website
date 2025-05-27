@@ -124,7 +124,7 @@ function PageHome() {
   return (
     <main id="home">
       {popularMovies && selectedList == "popular" && (
-        <HeroImage movieData={popularMovies[0]}/>
+        <HeroImage movieData={popularMovies[0]} displayData={true}/>
       )}
       <select id="list-select" onChange={handleSelectChange}>
         <option value={"popular"}>Popular</option>
