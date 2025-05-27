@@ -17,7 +17,7 @@ function MovieCard({ movieData }) {
     >
       <img
         src={`${IMG_BASE}/w342/${movieData.poster_path}`}
-        alt={movieData.overview}
+        alt={movieData.title + " poster"}
         className="poster"
       />
       <div className="backdrop">

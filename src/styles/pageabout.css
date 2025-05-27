@@ -1,0 +1,50 @@
+/* Hero Image / Section 1 */
+
+.hero-wrapper {
+    position: relative;
+}
+
+.about-section-1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 80%;
+    padding: 3rem 10%;
+
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.about-section-1 h1 {
+    margin: 1rem 0 2rem;
+    text-decoration: underline;
+}
+
+.about-section-1 p {
+    margin: 1rem 0 1rem;
+}
+
+/* Sections 2 and 3 */
+
+#about h2 {
+    text-decoration: underline;
+}
+
+.body-wrapper {
+    width: 80%;
+    padding: 3rem 10%;
+}
+
+.about-section-2 ul {
+    padding: 0;
+    margin: 1rem 0 2rem;
+}
+
+.about-section-2 li {
+    list-style: none;
+}
+
+.about-section-3 p {
+    margin: 1rem 0 2rem;
+}

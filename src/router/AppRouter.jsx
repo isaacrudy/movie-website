@@ -6,6 +6,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { GlobalProvider } from "../context/GlobalContext";
 import PageFavorites from "../pages/PageFavorites";
+import PageAbout from "../pages/PageAbout";
 import { useEffect } from "react";
 
 function AppRouter() {
@@ -22,6 +23,7 @@ function AppRouter() {
             <Route path="/" element={<PageHome />} />
             <Route path="/movie/:id" element={<PageSingleMovie />} />
             <Route path="/favorites" element={<PageFavorites />} />
+            <Route path="/about" element={<PageAbout />} />
             <Route path="/search" element={<SearchResults />} />
           </Routes>
         </div>
