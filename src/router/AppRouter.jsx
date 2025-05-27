@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import PageHome from "../pages/PageHome";
 import PageSingleMovie from "../pages/PageSingleMovie";
+import SearchResults from "../pages/PageSearchResults";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { GlobalProvider } from "../context/GlobalContext";
@@ -23,6 +24,7 @@ function AppRouter() {
             <Route path="/movie/:id" element={<PageSingleMovie />} />
             <Route path="/favorites" element={<PageFavorites />} />
             <Route path="/about" element={<PageAbout />} />
+            <Route path="/search" element={<SearchResults />} />
           </Routes>
         </div>
         <Footer />
