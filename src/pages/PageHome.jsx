@@ -5,7 +5,6 @@ import {
   getPopularMovies,
   getTopRatedMovies,
   getUpcomingMovies,
-  getRandomPopularMovie
 } from "../utils/api";
 import MovieCards from "../components/MovieCards";
 import "../styles/pagehome.css";
@@ -123,8 +122,8 @@ function PageHome() {
 
   return (
     <main id="home">
-      {popularMovies && selectedList == "popular" && (
-        <HeroImage movieData={popularMovies[0]} displayData={true}/>
+      {popularMovies && selectedList != "" && (
+        <HeroImage movieData={popularMovies[0]} displayData={true} />
       )}
       <select id="list-select" onChange={handleSelectChange}>
         <option value={"popular"}>Popular</option>

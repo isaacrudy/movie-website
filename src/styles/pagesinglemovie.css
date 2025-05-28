@@ -28,9 +28,10 @@
 
 .single-movie-display {
   display: grid;
+  padding-top: 1rem;
   grid-template-areas:
-    ". title title ."
-    ". date date ."
+    "title title title title"
+    "date date date date"
     "rating tags tags fav"
     "summary summary summary summary"
     "recs recs recs recs";
@@ -39,11 +40,13 @@
 .single-movie-display .movie-title {
   grid-area: title;
   text-align: center;
+  font-size: clamp(1.5rem, 2.5vw, 4rem);
 }
 
 .single-movie-display .release-date {
   grid-area: date;
   text-align: center;
+  font-size: clamp(1rem, 2vw, 3rem);
 }
 
 .single-movie-display .single-movie-rating {
@@ -51,7 +54,7 @@
   text-align: center;
   color: #d1af3b;
   display: flex;
-  font-size: x-large;
+  font-size: clamp(1rem, 2vw, 3rem);
   justify-content: center;
   align-items: center;
 }
@@ -64,13 +67,15 @@
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
+  padding-left: 0;
 }
 
 .single-movie-display .tags .tag {
-  margin: 1rem;
-  padding: 1rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
   border: 1px solid;
   font-weight: 700;
+  font-size: clamp(0.75rem, 1vw, 1.25rem);
 }
 
 .single-movie-display .fav-button {

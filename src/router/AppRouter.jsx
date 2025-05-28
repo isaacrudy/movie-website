@@ -8,6 +8,7 @@ import { GlobalProvider } from "../context/GlobalContext";
 import PageFavorites from "../pages/PageFavorites";
 import PageAbout from "../pages/PageAbout";
 import { useEffect } from "react";
+import PageNotFound from "../pages/PageNotFound";
 
 function AppRouter() {
   useEffect(() => {
@@ -20,6 +21,7 @@ function AppRouter() {
         <Header />
         <div className="wrapper">
           <Routes>
+            <Route path="*" element={<PageNotFound />} />
             <Route path="/" element={<PageHome />} />
             <Route path="/movie/:id" element={<PageSingleMovie />} />
             <Route path="/favorites" element={<PageFavorites />} />
