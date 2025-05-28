@@ -9,6 +9,7 @@ import PageFavorites from "../pages/PageFavorites";
 import PageAbout from "../pages/PageAbout";
 import { useEffect } from "react";
 import PageNotFound from "../pages/PageNotFound";
+import { APP_FOLDER_NAME } from "../utils/global";
 
 function AppRouter() {
   useEffect(() => {
@@ -16,7 +17,7 @@ function AppRouter() {
   }, []);
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={`/${APP_FOLDER_NAME}`}>
       <GlobalProvider>
         <Header />
         <div className="wrapper">
